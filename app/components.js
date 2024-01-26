@@ -82,7 +82,7 @@ export function HomePage() {
           </div>
           <div className=' h-auto'>
             <Image
-              src="/images/thirdBanner.png"
+              src="/images/secondBanner.png"
               width={500}
               height={500}
               alt="Picture of the watch3"
