@@ -76,7 +76,7 @@ export function HomePage() {
               src="/images/secondBanner.png"
               width={500}
               height={500}
-              alt="Picture of the watch"
+              alt="Picture of the watch2"
               className=''
             />
           </div>
@@ -85,7 +85,7 @@ export function HomePage() {
               src="/images/thirdBanner.png"
               width={500}
               height={500}
-              alt="Picture of the watch"
+              alt="Picture of the watch3"
               className=''
             />
           </div>
