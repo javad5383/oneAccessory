@@ -29,7 +29,7 @@ export function hamburgerClick() {
     }
 }
 
-export function animateCarousel() {
+export function AnimateCarousel() {
     useEffect(() => {
       //  setInterval(sliding,250);
       var count = 0;
@@ -46,7 +46,7 @@ export function animateCarousel() {
         count++;
       }
       
-      // var interval1= setInterval(sliding, 5000);
+      var interval1= setInterval(sliding, 5000);
 
      
 

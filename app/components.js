@@ -50,7 +50,7 @@ export function Header() {
 
 export function HomePage() {
 
-  myFunctions.animateCarousel();
+  myFunctions.AnimateCarousel();
 
 
   return (
