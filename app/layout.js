@@ -2,6 +2,7 @@ import localFont from 'next/font/local'
 import './globals.css'
 
 
+
 //  const Gilroy = localFont({
 //   src: '../public/fonts/Gilroy-Regular.woff',
 //   display: 'swap',
@@ -17,8 +18,13 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={Lufga} >{children}</body>
+    <html lang="en" className='overflow-x-hidden'>
+      <body className={`${Lufga} `} >{children}
+    
+      </body>
+     
+
+
     </html>
   )
 }
