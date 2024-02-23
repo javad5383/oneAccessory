@@ -103,7 +103,7 @@ export function HomePage() {
           </div>
 
 
-          <div className='inline-block  columns-2 gap-4 '>
+          <div className='inline-block mt-8 columns-2 gap-4 '>
             <div className=' h-auto'>
               <Image
                 src="/images/secondBanner.png"
