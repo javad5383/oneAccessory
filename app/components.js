@@ -72,7 +72,7 @@ export function HomePage() {
           {/* banner */}
 
 
-          <div className=" relative overflow-x-scroll overflow-y-hidden  h-[340px] w-{150%} slideShow">
+          <div className=" relative overflow-x-scroll overflow-y-hidden  h-[360px] w-{150%} slideShow">
             <div id='slider' className=' absolute w-[100%]  '>
               <Image
                 src="/images/firstBanner.png"
