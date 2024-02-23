@@ -1,62 +1,62 @@
 'use client'
-import { useEffect , useRef } from "react";
+import { useEffect, useRef } from "react";
 import $ from 'jquery';
 import Link from "next/link";
 import Image from "next/image";
 
 //open menu in mobile size
 export function hamburgerClick() {
-   
-    var spanBurger = document.querySelectorAll('#s');
-    var HBurgerDiv = document.querySelector('#hamburger');
-    var menu = document.querySelector('#menu');
-    //if display-none
-    if (HBurgerDiv.classList.contains('gap-2')) {
-        menu.classList.remove('hidden');
-        HBurgerDiv.classList.replace('gap-2', 'poppedUp');
-        spanBurger[0].classList.replace('block', 'hidden');
-        spanBurger[1].classList.add('rotate-45' ,'w-9');
-        spanBurger[2].classList.replace('w-5', 'w-9');
-        spanBurger[2].classList.add('-rotate-45');
-        //if display
-    } else {
-        menu.classList.add('hidden');
-        HBurgerDiv.classList.replace('poppedUp', 'gap-2');
-        spanBurger[0].classList.replace('hidden', 'block');
-        spanBurger[1].classList.remove('rotate-45');
-        spanBurger[2].classList.replace('w-9', 'w-5');
-        spanBurger[2].classList.remove('-rotate-45');
-    }
+
+  var spanBurger = document.querySelectorAll('#s');
+  var HBurgerDiv = document.querySelector('#hamburger');
+  var menu = document.querySelector('#menu');
+  //if display-none
+  if (HBurgerDiv.classList.contains('gap-2')) {
+    menu.classList.remove('hidden');
+    HBurgerDiv.classList.replace('gap-2', 'poppedUp');
+    spanBurger[0].classList.replace('block', 'hidden');
+    spanBurger[1].classList.add('rotate-45', 'w-9');
+    spanBurger[2].classList.replace('w-5', 'w-9');
+    spanBurger[2].classList.add('-rotate-45');
+    //if display
+  } else {
+    menu.classList.add('hidden');
+    HBurgerDiv.classList.replace('poppedUp', 'gap-2');
+    spanBurger[0].classList.replace('hidden', 'block');
+    spanBurger[1].classList.remove('rotate-45');
+    spanBurger[2].classList.replace('w-9', 'w-5');
+    spanBurger[2].classList.remove('-rotate-45');
+  }
 }
 
 export function AnimateCarousel() {
-    useEffect(() => {
-      //  setInterval(sliding,250);
-      var count = 0;
-      function sliding() {
-        if (count > 0) {
-          $('.slideShow').children()[0].style.left="24rem";
-          $('.slideShow').append($('.slideShow').children()[0]);
-          count=0
-        }
-       
-        
-        
-        $('.slideShow').children().animate({ left: '-=24rem' }, 2000);
-        count++;
+  useEffect(() => {
+    //  setInterval(sliding,250);
+    var count = 0;
+    function sliding() {
+      if (count > 0) {
+        $('.slideShow').children()[0].style.left = "24rem";
+        $('.slideShow').append($('.slideShow').children()[0]);
+        count = 0
       }
-      
-      var interval1= setInterval(sliding, 5000);
 
-     
 
-    
-    })
-  
-  }
-  export function Cart({imgSrc , price , offer}) {
-     return(
-      <div>
+
+      $('.slideShow').children().animate({ left: '-=24rem' }, 2000);
+      count++;
+    }
+
+    var interval1 = setInterval(sliding, 5000);
+
+
+
+
+  })
+
+}
+export function Cart({ imgSrc, price, offer }) {
+  return (
+    <div>
       <div className='pt-14 h-full w-full'>
         <Image
           src={imgSrc}
@@ -89,21 +89,24 @@ export function AnimateCarousel() {
           </div>
         </div>
         <div className='justify-items-center justify-center w-96 m-3'>
-        <hr className='w-full border-t-1 justify-center border-gray-300  '></hr>
+          <hr className='w-full border-t-1 justify-center border-gray-300  '></hr>
 
         </div>
         <div className='flex ml-6 mr-6 row-auto mt-5 gap-2'>
-          <p className='w-1/3 text-base justify-center text-center text-gray-500 bg-[#FAFAFA] rounded-full'>50mm Drivers</p>
+          <p className='w-1/3 text-base justify-center text-center  text-gray-500 bg-[#FAFAFA] rounded-full'>50mm Drivers</p>
           <p className='w-1/3 text-base text-center text-gray-500 bg-[#FAFAFA] rounded-full'>50mm Drivers</p>
           <p className='w-1/3 text-base text-center text-gray-500 bg-[#FAFAFA] rounded-full'>50mm Drivers</p>
 
         </div>
-        <div className='flex  justify-self-center rounded-full h-16 w-[350px]  bg-black m-8 '>
-        <Link className=' h-full w-full p-4 text-xl text-center  text-white ' rel="" type="" href="/">Add To Cart</Link>
+        <div className="grid grid-cols-1 mx-7 cursor-pointer justify-items-center mt-11 rounded-full hover:text-white text-black h-14 border-4 bg-white border-black focus:bg-black hover:bg-black">
+        <div className='flex justify-self-center items-center justify-items-center w-full h-full py-2 self-center    '>
+            <Link className='text-center  text-xl w-full h-full ' rel="" type="" href="/">Add To Cart</Link>
+          </div>
         </div>
-       
+
+
 
       </div>
-      </div>
-     )
-  }
+    </div>
+  )
+}

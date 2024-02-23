@@ -72,14 +72,14 @@ export function HomePage() {
           {/* banner */}
 
 
-          <div className=" relative overflow-x-scroll  h-[400px] w-{150%} slideShow">
+          <div className=" relative overflow-x-scroll  h-[340px] w-{150%} slideShow">
             <div id='slider' className=' absolute w-[100%]  '>
               <Image
                 src="/images/firstBanner.png"
                 width={500}
                 height={500}
                 alt="Picture of the watch"
-                className='h-96 w-96'
+                className='h-full w-full'
               />
             </div>
             <div id='slider' className=' absolute w-[100%]   left-96 '>
@@ -88,7 +88,7 @@ export function HomePage() {
                 width={500}
                 height={500}
                 alt="Picture of the watch"
-                className='h-96 w-96'
+                className='h-full w-full'
               />
             </div>
             <div id='slider' className='absolute w-[100%]  left-[768px]   '>
@@ -97,7 +97,7 @@ export function HomePage() {
                 width={500}
                 height={500}
                 alt="Picture of the watch"
-                className='h-96 w-96'
+                className='h-full w-full'
               />
             </div>
           </div>
