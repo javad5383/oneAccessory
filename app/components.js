@@ -72,8 +72,8 @@ export function HomePage() {
           {/* banner */}
 
 
-          <div className=" relative overflow-x-scroll overflow-y-hidden  h-[360px] w-{150%} slideShow">
-            <div id='slider' className=' absolute w-[100%]  '>
+          <div className=" relative overflow-x-scroll overflow-y-hidden no-scrollbar mt-5 h-[360px] w-{150%} slideShow">
+            <div id='slider1' className=' absolute w-[100%] left-0 JsHandler '>
               <Image
                 src="/images/firstBanner.png"
                 width={500}
@@ -82,7 +82,7 @@ export function HomePage() {
                 className='h-full w-full'
               />
             </div>
-            <div id='slider' className=' absolute w-[100%]   left-96 '>
+            <div id='slider2' className=' absolute w-[100%]   left-96 JsHandler'>
               <Image
                 src="/images/firstBanner.png"
                 width={500}
@@ -91,7 +91,7 @@ export function HomePage() {
                 className='h-full w-full'
               />
             </div>
-            <div id='slider' className='absolute w-[100%]  left-[768px]   '>
+            <div id='slider3' className='absolute w-[100%]  left-[768px] JsHandler  '>
               <Image
                 src="/images/firstBanner.png"
                 width={500}
@@ -101,9 +101,15 @@ export function HomePage() {
               />
             </div>
           </div>
+          {/* spans */}
+          <div className='   flex place-items-start w-full row-grid-4 gap-3'>
+            <div id='span1' class=" ring-2 ring-slate-600 ring-offset-2   rounded-full bg-slate-600 w-3 h-3 mt-4  "></div>
+            <div id='span2' class=" rounded-full bg-slate-300 w-3 h-3 mt-4  "></div>
+            <div id='span3' class=" rounded-full bg-slate-300 w-3 h-3 mt-4  "></div>
 
+          </div>
 
-          <div className='inline-block mt-1 columns-2 gap-4 '>
+          <div className='inline-block mt-12 columns-2 gap-4 '>
             <div className=' h-auto'>
               <Image
                 src="/images/secondBanner.png"
@@ -124,13 +130,7 @@ export function HomePage() {
             </div>
 
           </div>
-          {/* spans */}
-          <div className='   flex place-items-start w-full row-grid-4 gap-3'>
-            <div class=" ring-2 ring-slate-600 ring-offset-2   rounded-full bg-slate-600 w-3 h-3 mt-7  "></div>
-            <div class=" rounded-full bg-slate-300 w-3 h-3 mt-7  "></div>
-            <div class=" rounded-full bg-slate-300 w-3 h-3 mt-7  "></div>
-            <div class=" rounded-full bg-slate-300 w-3 h-3 mt-7  "></div>
-          </div>
+
         </div>
         {/* categories */}
         <div className='mt-20'>
@@ -183,15 +183,15 @@ export function HomePage() {
         <p className=' font-thin text-base pt-2 text-center'>Check our best seller products on Elma website right now</p>
       </div>
       {/* Cart */}
-     <myFunctions.Cart imgSrc="/images/HeadPhone.png" price={"20"} offer={"18.9"}/>
-     <myFunctions.Cart imgSrc="/images/watch.png"  price={"20"} offer={"18.9"} />
-     <myFunctions.Cart imgSrc="/images/earBuds.png"  price={"20"} offer={"18.9"}  />
-     <myFunctions.Cart imgSrc="/images/iphone.png"  price={"20"} offer={"18.9"}  />
-     <myFunctions.Cart imgSrc="/images/appleWatch.png"  price={"20"} offer={"18.9"}  />
-     <myFunctions.Cart imgSrc="/images/lapTop.png"  price={"20"} offer={"18.9"}  />
-    
-      
-     
+      <myFunctions.Cart imgSrc="/images/HeadPhone.png" price={"20"} offer={"18.9"} />
+      <myFunctions.Cart imgSrc="/images/watch.png" price={"20"} offer={"18.9"} />
+      <myFunctions.Cart imgSrc="/images/earBuds.png" price={"20"} offer={"18.9"} />
+      <myFunctions.Cart imgSrc="/images/iphone.png" price={"20"} offer={"18.9"} />
+      <myFunctions.Cart imgSrc="/images/appleWatch.png" price={"20"} offer={"18.9"} />
+      <myFunctions.Cart imgSrc="/images/lapTop.png" price={"20"} offer={"18.9"} />
+
+
+
     </div>
 
 

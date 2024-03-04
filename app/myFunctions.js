@@ -31,6 +31,8 @@ export function hamburgerClick() {
 
 export function AnimateCarousel() {
   useEffect(() => {
+
+
     //  setInterval(sliding,250);
     var count = 0;
     function sliding() {
@@ -39,11 +41,39 @@ export function AnimateCarousel() {
         $('.slideShow').append($('.slideShow').children()[0]);
         count = 0
       }
-
-
+      var slides = $('.JsHandler');
+      var CurrentSliderId = slides[1].id;
 
       $('.slideShow').children().animate({ left: '-=24rem' }, 2000);
       count++;
+//change spans
+      var span1 = document.querySelector('#span1');
+      var span2 = document.querySelector('#span2');
+      var span3 = document.querySelector('#span3');
+
+      if (CurrentSliderId == 'slider1') {
+        setTimeout(() => {
+          span1.className = 'ring-2 ring-slate-600 ring-offset-2   rounded-full bg-slate-600 w-3 h-3 mt-4'
+          span2.className = ' rounded-full bg-slate-300 w-3 h-3 mt-4'
+          span3.className = ' rounded-full bg-slate-300 w-3 h-3 mt-4'
+        }, 1500);
+
+      }
+      if (CurrentSliderId == 'slider2') {
+        setTimeout(() => {
+          span1.className = ' rounded-full bg-slate-300 w-3 h-3 mt-4'
+          span2.className = ' ring-2 ring-slate-600 ring-offset-2   rounded-full bg-slate-600 w-3 h-3 mt-4'
+          span3.className = ' rounded-full bg-slate-300 w-3 h-3 mt-4'
+        }, 1500);
+
+      }
+      if (CurrentSliderId == 'slider3') {
+        setTimeout(() => {
+          span1.className = ' rounded-full bg-slate-300 w-3 h-3 mt-4'
+          span2.className = ' rounded-full bg-slate-300 w-3 h-3 mt-4'
+          span3.className = 'ring-2 ring-slate-600 ring-offset-2   rounded-full bg-slate-600 w-3 h-3 mt-4'
+        }, 1500);
+      }
     }
 
     var interval1 = setInterval(sliding, 5000);
@@ -99,7 +129,7 @@ export function Cart({ imgSrc, price, offer }) {
 
         </div>
         <div className="grid grid-cols-1 mx-7 cursor-pointer justify-items-center mt-11 rounded-full hover:text-white text-black h-14 border-4 bg-white border-black focus:bg-black hover:bg-black">
-        <div className='flex justify-self-center items-center justify-items-center w-full h-full py-2 self-center    '>
+          <div className='flex justify-self-center items-center justify-items-center w-full h-full py-2 self-center    '>
             <Link className='text-center  text-xl w-full h-full ' rel="" type="" href="/">Add To Cart</Link>
           </div>
         </div>
